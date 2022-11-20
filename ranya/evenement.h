@@ -3,6 +3,15 @@
 #include<QString>
 #include<QSqlQueryModel>
 #include <QDate>
+#include <QtCharts/QChartView>
+#include <QtCharts/QPieSeries>
+#include <QtCharts/QPieSlice>
+#include <QGridLayout>
+#include <QtCharts>
+#include <QChartView>
+#include <QBarSet>
+#include <QBarSeries>
+#include <QPieSlice>
 class Evenement
 {
 public:
@@ -29,7 +38,13 @@ QSqlQueryModel* afficher();
 QSqlQueryModel* rechercher(int);
 QSqlQueryModel* rechercherlieu(QString);
 QSqlQueryModel* recherchertype(QString);
+
 QSqlQueryModel* Trier(QString ,QString);
+
+QChartView *stat_type();
+QChartView *stat_date();
+QChartView *stat_date_type();
+
 private:
     int NumEvent,nbinvit,duree;
     QString lieu,heure,type;
