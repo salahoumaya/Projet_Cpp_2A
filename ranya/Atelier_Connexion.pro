@@ -4,7 +4,13 @@
 #
 #-------------------------------------------------
 
-QT       += core gui sql
+QT+= sql
+QT+= printsupport
+QT+= core gui sql
+QT+= core gui sql charts
+QT+= location qml quickwidgets
+QT+= core network
+QT+= charts serialport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -28,12 +34,14 @@ SOURCES += \
     evenement.cpp \
         main.cpp \
         mainwindow.cpp \
-    connection.cpp
+    connection.cpp \
+    qrcode.cpp
 
 HEADERS += \
     evenement.h \
         mainwindow.h \
-    connection.h
+    connection.h \
+    qrcode.h
 
 FORMS += \
         mainwindow.ui
