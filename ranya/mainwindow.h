@@ -37,6 +37,20 @@ void on_recherchelieu_textChanged(const QString &arg1);
 
  void on_recherchertype_textChanged(const QString &arg1);
 
+ void on_pdf_clicked();
+
+
+
+ void on_calendarWidget_selectionChanged();
+
+ void on_qrcode_button_clicked();
+
+
+
+
+
+ void on_tabEvenement_clicked(const QModelIndex &index);
+
 private:
     Ui::MainWindow *ui;
     Evenement EV;
